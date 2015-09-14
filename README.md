@@ -8,7 +8,7 @@ WatchOS 2 Experiments - New API Components - Heartrate with HealthKit Framework.
 
 ## Example
 
-![](https://raw.githubusercontent.com/Sweefties/WatchOS2-NewAPI-HealthKit-HeartrateExample/master/source/Apple_Watch_template-HealthKit-HeartRate.jpg)
+![](https://raw.githubusercontent.com/Sweefties/WatchOS2-NewAPI-HealthKit-HeartReateExample/master/source/Apple_Watch_template-HealthKit-HeartRate.jpg)
 
 
 ## Requirements
