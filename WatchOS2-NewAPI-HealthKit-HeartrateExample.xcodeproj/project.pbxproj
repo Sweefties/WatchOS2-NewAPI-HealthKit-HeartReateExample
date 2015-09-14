@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E200F0B1BA64984004D18C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E200F0A1BA64984004D18C1 /* AppDelegate.swift */; };
+		7E200F0D1BA64984004D18C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E200F0C1BA64984004D18C1 /* ViewController.swift */; };
+		7E200F101BA64984004D18C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E200F0E1BA64984004D18C1 /* Main.storyboard */; };
+		7E200F121BA64984004D18C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E200F111BA64984004D18C1 /* Assets.xcassets */; };
+		7E200F151BA64984004D18C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E200F131BA64984004D18C1 /* LaunchScreen.storyboard */; };
+		7E200F1A1BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7E200F191BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App.app */; };
+		7E200F201BA64984004D18C1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E200F1E1BA64984004D18C1 /* Interface.storyboard */; };
+		7E200F221BA64984004D18C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E200F211BA64984004D18C1 /* Assets.xcassets */; };
+		7E200F291BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E200F281BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E200F2E1BA64984004D18C1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E200F2D1BA64984004D18C1 /* InterfaceController.swift */; };
+		7E200F301BA64984004D18C1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E200F2F1BA64984004D18C1 /* ExtensionDelegate.swift */; };
+		7E200F321BA64984004D18C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E200F311BA64984004D18C1 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E200F1B1BA64984004D18C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E200EFF1BA64984004D18C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E200F181BA64984004D18C1;
+			remoteInfo = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App";
+		};
+		7E200F2A1BA64984004D18C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E200EFF1BA64984004D18C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E200F271BA64984004D18C1;
+			remoteInfo = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7E200F391BA64984004D18C1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7E200F291BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E200F3D1BA64984004D18C1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7E200F1A1BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7E200F071BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS2-NewAPI-HealthKit-HeartrateExample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E200F0A1BA64984004D18C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E200F0C1BA64984004D18C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E200F0F1BA64984004D18C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E200F111BA64984004D18C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E200F141BA64984004D18C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7E200F161BA64984004D18C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E200F191BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E200F1F1BA64984004D18C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		7E200F211BA64984004D18C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E200F231BA64984004D18C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E200F281BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E200F2D1BA64984004D18C1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7E200F2F1BA64984004D18C1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		7E200F311BA64984004D18C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E200F331BA64984004D18C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E200F041BA64984004D18C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E200F251BA64984004D18C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E200EFE1BA64984004D18C1 = {
+			isa = PBXGroup;
+			children = (
+				7E200F091BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample */,
+				7E200F1D1BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App */,
+				7E200F2C1BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension */,
+				7E200F081BA64984004D18C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E200F081BA64984004D18C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E200F071BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample.app */,
+				7E200F191BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App.app */,
+				7E200F281BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E200F091BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample */ = {
+			isa = PBXGroup;
+			children = (
+				7E200F0A1BA64984004D18C1 /* AppDelegate.swift */,
+				7E200F0C1BA64984004D18C1 /* ViewController.swift */,
+				7E200F0E1BA64984004D18C1 /* Main.storyboard */,
+				7E200F111BA64984004D18C1 /* Assets.xcassets */,
+				7E200F131BA64984004D18C1 /* LaunchScreen.storyboard */,
+				7E200F161BA64984004D18C1 /* Info.plist */,
+			);
+			path = "WatchOS2-NewAPI-HealthKit-HeartrateExample";
+			sourceTree = "<group>";
+		};
+		7E200F1D1BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7E200F1E1BA64984004D18C1 /* Interface.storyboard */,
+				7E200F211BA64984004D18C1 /* Assets.xcassets */,
+				7E200F231BA64984004D18C1 /* Info.plist */,
+			);
+			path = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App";
+			sourceTree = "<group>";
+		};
+		7E200F2C1BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E200F2D1BA64984004D18C1 /* InterfaceController.swift */,
+				7E200F2F1BA64984004D18C1 /* ExtensionDelegate.swift */,
+				7E200F311BA64984004D18C1 /* Assets.xcassets */,
+				7E200F331BA64984004D18C1 /* Info.plist */,
+			);
+			path = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E200F061BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E200F3E1BA64984004D18C1 /* Build configuration list for PBXNativeTarget "WatchOS2-NewAPI-HealthKit-HeartrateExample" */;
+			buildPhases = (
+				7E200F031BA64984004D18C1 /* Sources */,
+				7E200F041BA64984004D18C1 /* Frameworks */,
+				7E200F051BA64984004D18C1 /* Resources */,
+				7E200F3D1BA64984004D18C1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E200F1C1BA64984004D18C1 /* PBXTargetDependency */,
+			);
+			name = "WatchOS2-NewAPI-HealthKit-HeartrateExample";
+			productName = "WatchOS2-NewAPI-HealthKit-HeartrateExample";
+			productReference = 7E200F071BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E200F181BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E200F3A1BA64984004D18C1 /* Build configuration list for PBXNativeTarget "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App" */;
+			buildPhases = (
+				7E200F171BA64984004D18C1 /* Resources */,
+				7E200F391BA64984004D18C1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E200F2B1BA64984004D18C1 /* PBXTargetDependency */,
+			);
+			name = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App";
+			productName = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App";
+			productReference = 7E200F191BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		7E200F271BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E200F361BA64984004D18C1 /* Build configuration list for PBXNativeTarget "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension" */;
+			buildPhases = (
+				7E200F241BA64984004D18C1 /* Sources */,
+				7E200F251BA64984004D18C1 /* Frameworks */,
+				7E200F261BA64984004D18C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension";
+			productName = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension";
+			productReference = 7E200F281BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E200EFF1BA64984004D18C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Sweefties;
+				TargetAttributes = {
+					7E200F061BA64984004D18C1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					7E200F181BA64984004D18C1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					7E200F271BA64984004D18C1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 7E200F021BA64984004D18C1 /* Build configuration list for PBXProject "WatchOS2-NewAPI-HealthKit-HeartrateExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E200EFE1BA64984004D18C1;
+			productRefGroup = 7E200F081BA64984004D18C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E200F061BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample */,
+				7E200F181BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App */,
+				7E200F271BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E200F051BA64984004D18C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E200F151BA64984004D18C1 /* LaunchScreen.storyboard in Resources */,
+				7E200F121BA64984004D18C1 /* Assets.xcassets in Resources */,
+				7E200F101BA64984004D18C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E200F171BA64984004D18C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E200F221BA64984004D18C1 /* Assets.xcassets in Resources */,
+				7E200F201BA64984004D18C1 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E200F261BA64984004D18C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E200F321BA64984004D18C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E200F031BA64984004D18C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E200F0D1BA64984004D18C1 /* ViewController.swift in Sources */,
+				7E200F0B1BA64984004D18C1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E200F241BA64984004D18C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E200F301BA64984004D18C1 /* ExtensionDelegate.swift in Sources */,
+				7E200F2E1BA64984004D18C1 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E200F1C1BA64984004D18C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E200F181BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App */;
+			targetProxy = 7E200F1B1BA64984004D18C1 /* PBXContainerItemProxy */;
+		};
+		7E200F2B1BA64984004D18C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E200F271BA64984004D18C1 /* WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension */;
+			targetProxy = 7E200F2A1BA64984004D18C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E200F0E1BA64984004D18C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E200F0F1BA64984004D18C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7E200F131BA64984004D18C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E200F141BA64984004D18C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7E200F1E1BA64984004D18C1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E200F1F1BA64984004D18C1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E200F341BA64984004D18C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E200F351BA64984004D18C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E200F371BA64984004D18C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sweefties.WatchOS2-NewAPI-HealthKit-HeartrateExample.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		7E200F381BA64984004D18C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sweefties.WatchOS2-NewAPI-HealthKit-HeartrateExample.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		7E200F3B1BA64984004D18C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = WatchOS2_NewAPI_HealthKit_HeartrateExample_WatchKit_Extension;
+				INFOPLIST_FILE = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sweefties.WatchOS2-NewAPI-HealthKit-HeartrateExample.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		7E200F3C1BA64984004D18C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = WatchOS2_NewAPI_HealthKit_HeartrateExample_WatchKit_Extension;
+				INFOPLIST_FILE = "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sweefties.WatchOS2-NewAPI-HealthKit-HeartrateExample.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		7E200F3F1BA64984004D18C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "WatchOS2-NewAPI-HealthKit-HeartrateExample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sweefties.WatchOS2-NewAPI-HealthKit-HeartrateExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E200F401BA64984004D18C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "WatchOS2-NewAPI-HealthKit-HeartrateExample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sweefties.WatchOS2-NewAPI-HealthKit-HeartrateExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E200F021BA64984004D18C1 /* Build configuration list for PBXProject "WatchOS2-NewAPI-HealthKit-HeartrateExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E200F341BA64984004D18C1 /* Debug */,
+				7E200F351BA64984004D18C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E200F361BA64984004D18C1 /* Build configuration list for PBXNativeTarget "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E200F371BA64984004D18C1 /* Debug */,
+				7E200F381BA64984004D18C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7E200F3A1BA64984004D18C1 /* Build configuration list for PBXNativeTarget "WatchOS2-NewAPI-HealthKit-HeartrateExample WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E200F3B1BA64984004D18C1 /* Debug */,
+				7E200F3C1BA64984004D18C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7E200F3E1BA64984004D18C1 /* Build configuration list for PBXNativeTarget "WatchOS2-NewAPI-HealthKit-HeartrateExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E200F3F1BA64984004D18C1 /* Debug */,
+				7E200F401BA64984004D18C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E200EFF1BA64984004D18C1 /* Project object */;
+}
