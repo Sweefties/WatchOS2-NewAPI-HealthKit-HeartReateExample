@@ -1,15 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="inm-vT-sgm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9013"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Main Interface Controller-->
+        <scene sceneID="yhV-Mo-V5A">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller hidesWhenLoading="NO" id="inm-vT-sgm" customClass="MainInterfaceController" customModule="WatchOS2_NewAPI_HealthKit_HeartrateExample_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="75" alignment="center" id="9JV-LK-5Ff">
+                            <items>
+                                <imageView width="75" height="75" alignment="left" verticalAlignment="center" image="Heart" id="2jC-hE-FeC"/>
+                                <group width="0.40000000000000002" height="1" alignment="right" layout="vertical" id="rbL-AG-zez">
+                                    <items>
+                                        <label alignment="right" text="BPM" id="y3G-kN-6b9">
+                                            <color key="textColor" red="0.8862745098" green="0.0" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label alignment="right" verticalAlignment="bottom" text="--" id="mjZ-oY-2fm">
+                                            <color key="textColor" red="0.3452524038" green="1" blue="0.5883413462" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="36"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="m0w-Lh-AHl">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="-----" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="sw2-UR-6EZ">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="2jz-5V-5YF">
+                            <items>
+                                <button width="40" height="40" alignment="center" verticalAlignment="center" backgroundImage="start" id="qmr-Gb-Ccd">
+                                    <connections>
+                                        <action selector="startButtonAction" destination="inm-vT-sgm" id="Xou-nq-w9F"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="bpmCounterLabel" destination="mjZ-oY-2fm" id="KKD-jV-L5W"/>
+                        <outlet property="bpmLabel" destination="y3G-kN-6b9" id="XCn-os-Yya"/>
+                        <outlet property="heartImage" destination="2jC-hE-FeC" id="nRd-4f-Bak"/>
+                        <outlet property="infoLabel" destination="sw2-UR-6EZ" id="Vi5-fC-V1t"/>
+                        <outlet property="startButton" destination="qmr-Gb-Ccd" id="EvX-XB-1ue"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="262" y="303.5"/>
         </scene>
     </scenes>
 </document>
