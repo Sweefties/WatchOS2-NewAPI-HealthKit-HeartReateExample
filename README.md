@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/build-pass-brightgreen.svg?style=flat-square)
 ![](https://img.shields.io/badge/platform-WatchOS2-ff69b4.svg?style=flat-square)
-![](https://img.shields.io/badge/Require-XCode7-lightgrey.svg?style=flat-square)
+![](https://img.shields.io/badge/Require-XCode%208-lightgrey.svg?style=flat-square)
 
 
 # WatchOS2 - New API - HealthKit - Heartrate Example
@@ -13,8 +13,8 @@ WatchOS 2 Experiments - New API Components - Heartrate with HealthKit Framework.
 
 ## Requirements
 
-- >= XCode 7.
-- >= Swift 2.
+- >= XCode 8.
+- >= Swift 3.
 - >= WatchOS2.
 
 Tested on WatchOS2, iOS 9.1 Simulators.
@@ -24,6 +24,9 @@ Tested on WatchOS2, iOS 9.1 Simulators.
 
 To run the example project, download or clone the repo.
 
+## Important
+
+this is the Xcode 8 / Swift 3 updated project.
 
 ## Caution
 

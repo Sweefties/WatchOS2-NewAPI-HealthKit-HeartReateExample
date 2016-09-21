@@ -25,14 +25,14 @@ class MainInterfaceController: WKInterfaceController {
     let healthStore = HKHealthStore()
     
     // define the activity type and location
-    let workoutSession = HKWorkoutSession(activityType: HKWorkoutActivityType.CrossTraining, locationType: HKWorkoutSessionLocationType.Indoor)
-    let heartRateUnit = HKUnit(fromString: "count/min")
+    let workoutSession = HKWorkoutSession(activityType: HKWorkoutActivityType.crossTraining, locationType: HKWorkoutSessionLocationType.indoor)
+    let heartRateUnit = HKUnit(from: "count/min")
     var anchor = HKQueryAnchor(fromValue: Int(HKAnchoredObjectQueryNoAnchor))
     var toggleAction = false
     
     // MARK: - Context Initializer
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
 
         setTitle("Heartrate")
         workoutSession.delegate = self
@@ -48,13 +48,13 @@ class MainInterfaceController: WKInterfaceController {
             return
         }
         /// To create samples that store a numerical value
-        guard let quantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate) else {
+        guard let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
             displayNotAllowed()
             return
         }
         /// Request permission to save and read the specified data types
         let dataTypes = Set(arrayLiteral: quantityType)
-        healthStore.requestAuthorizationToShareTypes(nil, readTypes: dataTypes) { (success, error) -> Void in
+        healthStore.requestAuthorization(toShare: nil, read: dataTypes) { (success, error) -> Void in
             if success == false {
                 self.displayNotAllowed()
             }
@@ -77,12 +77,12 @@ class MainInterfaceController: WKInterfaceController {
 typealias HealthKitWorkoutSessionDelegate = MainInterfaceController
 extension HealthKitWorkoutSessionDelegate : HKWorkoutSessionDelegate {
     
-    func workoutSession(workoutSession: HKWorkoutSession, didChangeToState toState: HKWorkoutSessionState, fromState: HKWorkoutSessionState, date: NSDate) {
-        dispatch_async(dispatch_get_main_queue()) {
+    func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
+        DispatchQueue.main.async {
         switch toState {
-        case .Running:
+        case .running:
             self.workoutDidStart(date)
-        case .Ended:
+        case .ended:
             self.workoutDidEnd(date)
         default:
             print("unexpected \(toState)")
@@ -90,7 +90,7 @@ extension HealthKitWorkoutSessionDelegate : HKWorkoutSessionDelegate {
         }
     }
     
-    func workoutSession(workoutSession: HKWorkoutSession, didFailWithError error: NSError) {
+    func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
         print("workOutSession Error : \(error.localizedDescription)")
     }
 }
@@ -102,28 +102,28 @@ extension HealthKitWorkoutUpdates {
     
     
     /// start workout
-    func workoutDidStart(date : NSDate) {
+    func workoutDidStart(_ date : Date) {
         if let query = createHeartRateStreamingQuery(date) {
-            healthStore.executeQuery(query)
+            healthStore.execute(query)
         } else {
             infoLabel.setText("cannot start")
         }
     }
     /// stop workout
-    func workoutDidEnd(date : NSDate) {
+    func workoutDidEnd(_ date : Date) {
         if let query = createHeartRateStreamingQuery(date) {
-            healthStore.stopQuery(query)
+            healthStore.stop(query)
             infoLabel.setText("Stop")
         } else {
             infoLabel.setText("cannot stop")
         }
     }
     /// HealthKit - create Heart Rate Streaming query
-    func createHeartRateStreamingQuery(workoutStartDate: NSDate) -> HKQuery? {
+    func createHeartRateStreamingQuery(_ workoutStartDate: Date) -> HKQuery? {
         // adding predicate will not work
-        let predicate = HKQuery.predicateForSamplesWithStartDate(workoutStartDate, endDate: nil, options: HKQueryOptions.None)
+        let predicate = HKQuery.predicateForSamples(withStart: workoutStartDate, end: nil, options: HKQueryOptions())
         
-        guard let quantityType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate) else { return nil }
+        guard let quantityType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else { return nil }
         
         let heartRateQuery = HKAnchoredObjectQuery(type: quantityType, predicate: predicate, anchor: anchor, limit: Int(HKObjectQueryNoLimit)) { (query, sampleObjects, deletedObjects, newAnchor, error) -> Void in
             guard let newAnchor = newAnchor else {return}
@@ -138,12 +138,12 @@ extension HealthKitWorkoutUpdates {
         return heartRateQuery
     }
     /// HealthKit - update Heart Rate with Samples
-    func updateHeartRate(samples: [HKSample]?) {
+    func updateHeartRate(_ samples: [HKSample]?) {
         guard let heartRateSamples = samples as? [HKQuantitySample] else {return}
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             guard let sample = heartRateSamples.first else{return}
-            let value = sample.quantity.doubleValueForUnit(self.heartRateUnit)
+            let value = sample.quantity.doubleValue(for: self.heartRateUnit)
             self.bpmCounterLabel.setText(String(UInt16(value)))
             
             // retrieve source from sample
@@ -161,11 +161,11 @@ extension IBActions {
     
     @IBAction func startButtonAction() {
         if !toggleAction {
-            healthStore.startWorkoutSession(workoutSession)
+            healthStore.start(workoutSession)
             toggleAction = true
             startButton.setBackgroundImageNamed("stop")
         }else{
-            healthStore.endWorkoutSession(workoutSession)
+            healthStore.end(workoutSession)
             toggleAction = false
             startButton.setBackgroundImageNamed("start")
             //TODO: - Stop and save methods (create SessionManager Helper by example..)
@@ -179,21 +179,21 @@ extension IBActions {
 typealias UIAnimationStyle = MainInterfaceController
 extension UIAnimationStyle {
     
-    func updateSourceName(deviceName: String) {
+    func updateSourceName(_ deviceName: String) {
         infoLabel.setText("Source: \(deviceName)")
     }
     
     func animateHeart() {
-        self.animateWithDuration(0.5) {
+        self.animate(withDuration: 0.5) {
             self.heartImage.setWidth(50)
             self.heartImage.setHeight(50)
         }
         
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * double_t(NSEC_PER_SEC)))
-        let global_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-        dispatch_after(time, global_queue) {
-            dispatch_async(dispatch_get_main_queue(), {
-                self.animateWithDuration(0.5, animations: {
+        let time = DispatchTime.now() + Double(Int64(0.5 * double_t(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        let global_queue = DispatchQueue.global(qos: .userInteractive)
+        global_queue.asyncAfter(deadline: time) {
+            DispatchQueue.main.async(execute: {
+                self.animate(withDuration: 0.5, animations: {
                     self.heartImage.setWidth(75)
                     self.heartImage.setHeight(75)
                 })
