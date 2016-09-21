@@ -19,6 +19,9 @@ WatchOS 2 Experiments - New API Components - Heartrate with HealthKit Framework.
 
 Tested on WatchOS2, iOS 9.1 Simulators.
 
+## Important
+
+Get the `master` branch for XCode 8 / Swift 3 updated project.
 
 ## Usage
 
